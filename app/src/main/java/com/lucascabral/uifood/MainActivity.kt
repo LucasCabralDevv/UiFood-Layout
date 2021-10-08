@@ -3,6 +3,7 @@ package com.lucascabral.uifood
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayoutMediator
+import com.lucascabral.uifood.adapter.TabViewPagerAdapter
 import com.lucascabral.uifood.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
