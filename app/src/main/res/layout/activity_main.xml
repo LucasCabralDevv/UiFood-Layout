@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
         <Button
             android:text="Av. Santos"
+            style="@style/UiFoodButtonStyle"
             android:drawableEnd="@drawable/ic_arrow_down"
             android:textSize="13sp"
             android:layout_width="wrap_content"
@@ -27,6 +28,7 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/add_tab"
+        app:tabTextAppearance="@style/UiFoodTabLayoutTextAppearance"
         app:tabMode="auto"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="1dp"
