@@ -10,33 +10,34 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button
-            android:text="Av. Santos"
-            style="@style/UiFoodButtonStyle"
-            android:drawableEnd="@drawable/ic_arrow_down"
-            android:textSize="13sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-        <ImageView
-            android:layout_gravity="end"
-            android:paddingHorizontal="16dp"
+        <Button
+            style="@style/UiFoodButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:text="Av. Santos"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingHorizontal="16dp"
             android:src="@drawable/ic_qr_code_scanner" />
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/add_tab"
-        app:tabTextAppearance="@style/UiFoodTabLayoutTextAppearance"
-        app:tabMode="auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/red"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="1dp"
-        app:tabIndicatorColor="@color/red"
+        app:tabMode="auto"
         app:tabSelectedTextColor="@color/red"
-        app:tabTextColor="@color/gray"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        app:tabTextAppearance="@style/UiFoodTabLayoutTextAppearance"
+        app:tabTextColor="@color/gray" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/add_viewpager"

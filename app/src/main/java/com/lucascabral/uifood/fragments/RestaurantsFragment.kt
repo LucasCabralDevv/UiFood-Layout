@@ -7,10 +7,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.tiagoaguiar.atway.ui.adapter.ATAdapter
 import co.tiagoaguiar.atway.ui.adapter.ATViewHolder
+import com.lucascabral.uifood.BannerView
 import com.lucascabral.uifood.CategoryView
 import com.lucascabral.uifood.R
 import com.lucascabral.uifood.databinding.FragmentRestaurantsBinding
 import com.lucascabral.uifood.extensions.toChip
+import com.lucascabral.uifood.model.Banner
 import com.lucascabral.uifood.model.Category
 import com.lucascabral.uifood.model.FilterItem
 
@@ -20,6 +22,10 @@ class RestaurantsFragment : Fragment(R.layout.fragment_restaurants) {
 
     private val categoryAdapter = ATAdapter({
         CategoryView(it)
+    })
+
+    private val bannerAdapter = ATAdapter({
+        BannerView(it)
     })
 
     private var filters = arrayOf(
@@ -75,10 +81,21 @@ class RestaurantsFragment : Fragment(R.layout.fragment_restaurants) {
             )
         )
 
+        bannerAdapter.items = arrayListOf(
+            Banner(1, "https://static-images.ifood.com.br/image/upload/t_high/discoveries/itensBasicosNOV21Principal_zE1X.png"),
+            Banner(1, "https://static-images.ifood.com.br/image/upload/t_high/discoveries/MerceariaeMatinaisPrincipal_mfDO.png"),
+            Banner(1, "https://static-images.ifood.com.br/image/upload/t_high/discoveries/Bebidas40offPrincipal_cljA.png")
+        )
+
         binding.apply {
             rvCategory.layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             rvCategory.adapter = categoryAdapter
+
+            rvBanners.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            rvBanners.adapter = bannerAdapter
+
             filters.forEach { filterItem ->
                 this.chipGroupFilter.addView(filterItem.toChip(requireContext()))
             }

@@ -9,9 +9,9 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clipToPadding="false"
         android:paddingHorizontal="8dp"
         android:paddingVertical="12dp"
-        android:clipToPadding="false"
         android:scrollbars="none">
 
         <com.google.android.material.chip.ChipGroup
@@ -25,5 +25,20 @@
         android:id="@+id/rv_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_banners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="6dp" />
+
+    <LinearLayout
+        android:id="@+id/dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" />
 
 </LinearLayout>
