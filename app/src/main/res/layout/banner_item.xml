@@ -3,6 +3,5 @@
     android:id="@+id/img_banner"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="#FF0000"
     android:scaleType="centerCrop"
     android:paddingHorizontal="12dp"/>
