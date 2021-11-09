@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/img_category"
-        android:layout_width="80dp"
-        android:layout_height="82dp"
+        android:layout_width="70dp"
+        android:layout_height="72dp"
         app:layout_constraintBottom_toTopOf="@id/txt_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
