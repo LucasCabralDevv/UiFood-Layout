@@ -1,4 +1,4 @@
-package com.lucascabral.uifood
+package com.lucascabral.uifood.adapter.view
 
 import android.graphics.drawable.GradientDrawable
 import android.view.ViewGroup

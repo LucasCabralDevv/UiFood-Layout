@@ -1,9 +1,8 @@
-package com.lucascabral.uifood
+package com.lucascabral.uifood.adapter.view
 
 import android.view.ViewGroup
 import co.tiagoaguiar.atway.ui.adapter.ATViewHolder
 import com.lucascabral.uifood.databinding.BannerItemBinding
-import com.lucascabral.uifood.databinding.CategoryItemBinding
 import com.lucascabral.uifood.model.Banner
 import com.squareup.picasso.Picasso
 
