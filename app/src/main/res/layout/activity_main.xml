@@ -1,46 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-        <Button
-            style="@style/UiFoodButtonStyle"
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                style="@style/UiFoodButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:text="@string/address_button_text"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingHorizontal="16dp"
+                android:src="@drawable/ic_qr_code_scanner" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/add_tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_arrow_down"
-            android:text="Av. Santos"
-            android:textSize="13sp" />
+            app:tabIndicatorColor="@color/red"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="1dp"
+            app:tabMode="auto"
+            app:tabSelectedTextColor="@color/red"
+            app:tabTextAppearance="@style/UiFoodTabLayoutTextAppearance"
+            app:tabTextColor="@color/gray" />
 
-        <ImageView
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/add_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        app:contentPadding="15dp"
+        app:cardElevation="4dp">
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:paddingHorizontal="16dp"
-            android:src="@drawable/ic_qr_code_scanner" />
-    </androidx.appcompat.widget.Toolbar>
+            android:textColor="@color/black"
+            android:layout_gravity="center|top"
+            android:text="@string/explore_more" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/add_tab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/red"
-        app:tabIndicatorFullWidth="false"
-        app:tabIndicatorHeight="1dp"
-        app:tabMode="auto"
-        app:tabSelectedTextColor="@color/red"
-        app:tabTextAppearance="@style/UiFoodTabLayoutTextAppearance"
-        app:tabTextColor="@color/gray" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/add_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:text="@string/enter"
+            android:textColor="@color/red" />
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
